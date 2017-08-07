@@ -31,5 +31,5 @@ $SCREENSHOT
 # convert $IMAGE -resize 50%
 convert $IMAGE -blur $BLURTYPE $IMAGE
 # convert $IMAGE -resize 200%
-i3lock -d -i $IMAGE -I 10 -p win
+i3lock -i $IMAGE 
 rm $IMAGE
