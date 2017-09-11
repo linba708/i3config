@@ -164,6 +164,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 bindsym $mod+l exec ~/.config/i3/lock.sh
+exec xautolock -time 5 -locker '~/.config/i3/lock.sh' &
 
 new_window normal 0 px 
 hide_edge_borders both
