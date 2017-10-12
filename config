@@ -166,16 +166,16 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+l exec ~/.config/i3/lock.sh
 exec xautolock -time 5 -locker '~/.config/i3/lock.sh' &
 
-new_window normal 0 px 
+new_window normal 1 px 
 hide_edge_borders both
 
 #client.focused #dcdccc #dcdccc #3c3b37 #ffcfaf
-client.focused_inactive #3c3b37 #3c3b37 #dcdccc #3c3b37
+client.focused_inactive #3c3b37 #3c3b37 #dcdccc #3c3b37 #3c3b37
 #client.unfocused #3c3b37 #3c3b37 #dcdccc #3c3b37
 #client.urgent #dca3a3 #dca3a3 #dcdccc #3c3b37
 
 #client.unfocused #333333 #222222 #3c3b37 #292d2e #222222
-client.focused #dcdccc #3c3b37 #dcdccc #3c3b37
+client.focused #dcdccc #3c3b37 #dcdccc #dcdccc #dcdccc
 
 
 workspace_layout tabbed
