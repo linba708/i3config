@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+i3status -c /home/linus/.config/i3/i3status_bar.conf | while :
+do
+
+    sp=$(get_spotify)
+    spJson=$(to_json "${sp}")
+    read line
+    echo  | $line" || exit 1
+done
