@@ -31,6 +31,6 @@ $SCREENSHOT
 # convert $IMAGE -resize 50%
 convert $IMAGE -blur $BLURTYPE $IMAGE
 # convert $IMAGE -resize 200%
-playerctl pause
+# playerctl pause
 i3lock -i $IMAGE 
 rm $IMAGE
