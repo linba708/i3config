@@ -10,7 +10,6 @@
 # i3lock
 # scrot (optional but default)
 
-#IMAGE2=/home/linus/Pictures/evil_linus.jpg
 IMAGE=/tmp/i3lock.png
 SCREENSHOT="scrot $IMAGE" # 0.46s
 
@@ -35,5 +34,5 @@ $SCREENSHOT
 convert $IMAGE -blur $BLURTYPE $IMAGE
 # convert $IMAGE -resize 200%
 # playerctl pause
-i3lock -i $IMAGE
+i3lock -i 
 rm $IMAGE
