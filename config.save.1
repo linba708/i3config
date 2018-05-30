@@ -93,7 +93,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: Webstorm/Goland
+bindsym $mod+1 workspace 1: Webstorm
 bindsym $mod+2 workspace 2: Franz
 bindsym $mod+3 workspace 3: Misc
 bindsym $mod+4 workspace 4: Intellij
@@ -105,7 +105,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace <span foreground="red">💜</span> <span foreground="pink">spider-space</span> <span foreground="red">💜</span>
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: Webstorm/Goland
+bindsym $mod+Shift+1 move container to workspace 1: Webstorm
 bindsym $mod+Shift+2 move container to workspace 2: Franz
 bindsym $mod+Shift+3 move container to workspace 3: Misc
 bindsym $mod+Shift+4 move container to workspace 4: Intellij
@@ -179,10 +179,9 @@ client.focused #dcdccc #3c3b37 #dcdccc #dcdccc #dcdccc
 
 
 workspace_layout tabbed
-assign [class="jetbrains-webstorm" instance="sun-awt-X11-XFramePeer"] → "1: Webstorm/Goland"
-assign [class="jetbrains-goland" instance="sun-awt-X11-XFramePeer"] → "1: Webstorm/Goland"
+assign [class="jetbrains-webstorm" instance="sun-awt-X11-XFramePeer"] → "1: Webstorm"
 assign [class="jetbrains-idea" instance="sun-awt-X11-XFramePeer"] → "4: Intellij"
-workspace "1: Webstorm/Goland" output HDMI2
+workspace "1: Webstorm" output HDMI2
 workspace "2: Franz" output HDMI2
 workspace "3: Misc" output HDMI2
 workspace "4: Intellij" output HDMI1
@@ -204,17 +203,13 @@ mode "$mode_system" {
 }
 bindsym $mod+Pause mode "$mode_system"
 
-#exec --no-startup-id compton
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Spring_by_Peter_Apas.jpg
-
-
 exec_always xrandr --output HDMI1 --right-of HDMI2
 #exec_always nm-applet
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command i3status -c ~/.config/i3/i3status_bar.conf | ~/.config/i3/i3spotifystatus/pystatus.py
+	status_command ~/.config/i3/spotify.sh | i3
 #	status_command ~/.config/i3/i3status_bar.sh
 #	status_command ~/.config/i3/i3status-wrapper.sh
         tray_output primary
@@ -226,9 +221,9 @@ bar {
 		    statusline #dcdccc
      
 		    focused_workspace #dcdccc #3c3b37 #dcdccc
-		    active_workspace #3c3b37 #3c3b37 #dcdccc
-#		    inactive_workspace #636363 #3c3b37 #dcdccc
-		    inactive_workspace #333333 #222222 #888888
+		    active_workspace #ffcfaf #3c3b37 #ffcfaf
+		    inactive_workspace #636363 #3c3b37 #dcdccc
+#		    inactive_workspace #3c3b37 #3c3b37 #dcdccc
 		    urgent_workspace #dca3a3 #3c3b37 #dca3a3
 	}
 
