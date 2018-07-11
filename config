@@ -182,11 +182,11 @@ workspace_layout tabbed
 assign [class="jetbrains-webstorm" instance="sun-awt-X11-XFramePeer"] → "1: Webstorm/Goland"
 assign [class="jetbrains-goland" instance="sun-awt-X11-XFramePeer"] → "1: Webstorm/Goland"
 assign [class="jetbrains-idea" instance="sun-awt-X11-XFramePeer"] → "4: Intellij"
-workspace "1: Webstorm/Goland" output HDMI2
-workspace "2: Franz" output HDMI2
-workspace "3: Misc" output HDMI2
-workspace "4: Intellij" output HDMI1
-workspace "5: Terminals" output HDMI1
+workspace "1: Webstorm/Goland" output HDMI-2
+workspace "2: Franz" output HDMI-2
+workspace "3: Misc" output HDMI-2
+workspace "4: Intellij" output HDMI-1
+workspace "5: Terminals" output HDMI-1
 
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -205,10 +205,10 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 
 #exec --no-startup-id compton
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/Spring_by_Peter_Apas.jpg
+exec --no-startup-id feh --bg-scale /home/linus/Pictures/lockscreen.jpg 
 
 
-exec_always xrandr --output HDMI1 --right-of HDMI2
+exec_always xrandr --output HDMI-1 --right-of HDMI-2
 #exec_always nm-applet
 
 # Start i3bar to display a workspace bar (plus the system information i3status

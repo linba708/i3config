@@ -11,8 +11,9 @@
 # scrot (optional but default)
 
 #IMAGE2=/home/linus/Pictures/evil_linus.jpg
-IMAGE=/tmp/i3lock.png
-SCREENSHOT="scrot $IMAGE" # 0.46s
+
+#IMAGE=/tmp/i3lock.png
+#SCREENSHOT="scrot $IMAGE" # 0.46s
 
 # Alternate screenshot method with imagemagick. NOTE: it is much slower
 # SCREENSHOT="import -window root $IMAGE" # 1.35s
@@ -21,7 +22,9 @@ SCREENSHOT="scrot $IMAGE" # 0.46s
 # Uncomment one to use, if you have multiple, the last one will be used
 
 # All options are here: http://www.imagemagick.org/Usage/blur/#blur_args
-BLURTYPE="0x8" # 7.52s
+
+#BLURTYPE="0x8" # 7.52s
+
 #BLURTYPE="0x2" # 4.39s
 #BLURTYPE="5x2" # 3.80s
 #BLURTYPE="2x8" # 2.90s
@@ -30,10 +33,15 @@ BLURTYPE="0x8" # 7.52s
 
 
 # Get the screenshot, add the blur and lock the screen with it
-$SCREENSHOT
+
+#$SCREENSHOT
+
 # convert $IMAGE -resize 50%
-convert $IMAGE -blur $BLURTYPE $IMAGE
+
+#convert $IMAGE -blur $BLURTYPE $IMAGE
+
 # convert $IMAGE -resize 200%
 # playerctl pause
-i3lock -i $IMAGE
-rm $IMAGE
+#i3lock -i $IMAGE
+i3lock -i /home/linus/Pictures/lockscreen2.png
+#rm $IMAGE
